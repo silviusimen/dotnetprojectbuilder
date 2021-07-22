@@ -8,5 +8,5 @@ sudo ./install_dotnet_sdk.sh
 
 # Project setup
 ```
-./create_new_project.sh Ml.Prj.2
+./create_new_project.sh My.Project.Name
 ```
