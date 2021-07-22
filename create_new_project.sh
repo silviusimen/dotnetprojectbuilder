@@ -130,6 +130,7 @@ function run_workflow_from_prj_dir()
   create_coverage_check_script
   create_makefile 
   build_project
+  create_git_repo
 }
 
 function run_workflow()
@@ -140,5 +141,4 @@ function run_workflow()
   popd
 }
 
-#run_workflow
-create_git_repo
+run_workflow
