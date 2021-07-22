@@ -6,7 +6,7 @@ has_coverage=$(cat "${CS_PRJ_FILE}" | grep "<CoverletOutput>" | wc -l)
 
 function coverage_xml()
 {
-cat << __COVERAGE_PROPERTY_GROUP
+cat << '__HERE_DOCUMENT_END'
   <PropertyGroup>
     <CoverletOutputFormat>cobertura</CoverletOutputFormat>
     <CoverletOutput>../../coverage.xml</CoverletOutput>
@@ -14,7 +14,7 @@ cat << __COVERAGE_PROPERTY_GROUP
   </PropertyGroup>
 
 </Project>
-__COVERAGE_PROPERTY_GROUP
+__HERE_DOCUMENT_END
 }
 
 if [ $has_coverage == 1 ]; then
