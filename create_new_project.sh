@@ -1,6 +1,12 @@
 #!/bin/bash
 
 DOT_NET_PRJ_NAME="$1"
+
+if [ -z "$DOT_NET_PRJ_NAME" ]; then
+  echo "Project identifier is a required parameter"
+  exit 1
+fi
+
 SELFDIRREL=$(dirname $0)
 SELFDIR=$(readlink -f ${SELFDIRREL}/)
 
